@@ -1,0 +1,14 @@
+const router=require('express').Router();
+const {cancel_coupon,apply_coupon_on_cart,core_of_rules,remove_all_carts,remove_from_quantity,add_to_quantity,delProd_fromcart,get_cart_render,clearcart,get_cart,add_to_cart} = require('../controller/cart');
+router.post("/remove_from_quantity",remove_from_quantity);
+router.post("/add_to_quantity",add_to_quantity);
+router.post("/addtocart",add_to_cart);
+router.post("/delfromcart",delProd_fromcart);
+router.post("/apply_coupon_on_cart",apply_coupon_on_cart);
+router.get("/getcart",get_cart);
+router.get("/remove_all_carts",remove_all_carts);
+router.get("/core_of_rules",core_of_rules);
+router.get("/clearcart",clearcart);
+router.get("/cancel_coupon",cancel_coupon);
+router.get("/getrender",get_cart_render);
+module.exports = router;

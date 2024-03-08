@@ -1,0 +1,21 @@
+const router=require('express').Router();
+const {update_membership_data,get_Favorite_prods,recover_password,ForgetMemberPass,get_member_by_email,remove_favorite_prod_from_member,add_favorite_prod_to_member,get_all_member_orders,Get_All,Get_All_NotConfirmed,login_simple,Get_All_Active3,Register,Login,Get_All_Active,Get_All_Active2,DeleteMember}=require('../controller/membership.js');
+router.post("/reg",Register);
+router.post("/log",Login);
+router.post("/get_all_member_orders",get_all_member_orders);
+router.post("/login",login_simple);
+router.get("/del/:Email",DeleteMember);
+router.get("/all",Get_All_Active);
+router.get("/all2",Get_All_Active2);
+router.get("/all3",Get_All_Active3);
+router.get("/all_",Get_All);
+router.get("/all_notconf",Get_All_NotConfirmed);
+router.post("/add_favorite_member",add_favorite_prod_to_member);
+router.post("/remove_favorite_member",remove_favorite_prod_from_member);
+router.post("/get_by_email",get_member_by_email); 
+router.post("/forget",ForgetMemberPass); 
+router.post("/recover_password",recover_password); 
+router.post("/get_favorites",get_Favorite_prods);
+router.post("/update_membership_data",update_membership_data); 
+
+module.exports = router;

@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <title>Wm</title>
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="../public/css/styles.css">
+        <link rel="stylesheet" href="../public/css/styles2.css">
+        <link href="https://d33wubrfki0l68.cloudfront.net/css/d07dd48db4e7867e0221819b72746e06ed0bcf58/sass/main.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+        <script defer="" src="../public/js/wmheader.js"></script>
+        <link rel="stylesheet" href="../public/css/header.css">
+        <link rel="stylesheet" href="../public/css/wm.css">
+        <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+    </head>
+    <body> 
+        {{>negishot}}
+        <header class="header" >
+            
+            <section class="header-container">
+                <div class="header-container__top">
+                    <div >
+                        <div class="intro-text rounded" style="display: flex;">
+                            <button id="close_panel" class="btn btn-primary close_panel" >
+                                תפריט ניהול
+                            </button>
+                             <li class="menu__nav-list__item" >
+                                <a id="setteings_items" class="btn btn-primary close_panel2" style="" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-cog" aria-hidden="true"></i> הגדרות מערכת
+                                </a>
+                                <ul  class="dropdown-menu">
+                                    <li><button onclick="hide_display(22);" style="font-size: 1.5rem;" class="dropdown-item" >מורשי IP</button></li>
+                                    <li><button onclick="hide_display(17)" style="font-size: 1.5rem;" class="dropdown-item"  >לוגים</button></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><button onclick="hide_display(10)" style="font-size: 1.5rem;" class="dropdown-item">קבצי PDF</button></li>
+                                    <li><button onclick="hide_display(23)" style="font-size: 1.5rem;"  class="dropdown-item" >הפניות URL</button></li>   
+                                </ul>
+                            </li>
+                        </div>
+                        <div id="sidebar" class="sidebar">
+                            <div id="contentt">
+                                <ul  id="header_cats">
+                                    <li class="menu__nav-list__item">
+                                        <a style="font-size: 1.5rem;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-sharp fa-solid fa-box"></i>  מוצרים
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><button onclick="hide_display(1) " class="dropdown-item" style="font-size: 1.5rem;" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >מוצרים </button></li>
+                                            <li><button onclick="hide_display(3)" class="dropdown-item" style="font-size: 1.5rem;" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >עריכת מוצרים</button></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><button onclick="hide_display(2)" class="dropdown-item" style="font-size: 1.5rem;" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >העלאת תמונת מוצר</button></li>
+                                            <li><button onclick="hide_display(16)" class="dropdown-item" style="font-size: 1.5rem;" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >מחיקת תמונת מוצר</button></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu__nav-list__item">
+                                        <a style="font-size: 1.5rem;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          <i class="fa-solid fa-users"></i> חברי מועדון
+                                        </a>
+                                        <ul class="dropdown-menu" style="width:300px;" >
+                                            <li><button onclick="hide_display(12)" class="dropdown-item" style="font-size: 1.5rem;" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >כל חברי מועדון</button></li>
+                                            <li><button onclick="hide_display(6)" class="dropdown-item" style="font-size: 1.5rem;"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> חברי מועדון מאומתים</button></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><button onclick="hide_display(13)" class="dropdown-item"  style="font-size: 1.5rem;" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> חברי מועדון לא מאומתים</button></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu__nav-list__item">
+                                        <a style="font-size: 1.5rem;" style="font-size: 1.5rem;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-diagram-project"></i> קטגוריות
+                                        </a>
+                                        <ul class="dropdown-menu" style="width:300px;" >
+                                            <li><button onclick="hide_display(7)" class="dropdown-item" style="font-size: 1.5rem;" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >עריכת קטגוריות</button></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu__nav-list__item">
+                                        <a  style="font-size: 1.5rem;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-palette"></i> עיצוב האתר
+                                        </a>
+                                        <ul class="dropdown-menu" style="width:300px;" >
+                                            <li><button onclick="hide_display(14)" class="dropdown-item" style="font-size: 1.5rem;" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >דף הבית</button></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><button onclick="hide_display(15)" class="dropdown-item" style="font-size: 1.5rem;" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >דף עמוד מוצרים</button></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu__nav-list__item">
+                                        <a  style="font-size: 1.5rem;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                           <i class="fa-solid fa-handcuffs"></i> מערכת חוקים
+                                        </a>
+                                        <ul class="dropdown-menu" style="width:300px;" >
+                                            <li><button onclick="hide_display(8)" class="dropdown-item" style="font-size: 1.5rem;" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >יצירת חוקים</button></li>
+                                        </ul>
+                                    </li>      
+                                    <li class="menu__nav-list__item" >
+                                        <a  style="font-size: 1.5rem;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-user-tie"></i> מנהלים
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><button onclick="hide_display(5)" style="font-size: 1.5rem;" class="dropdown-item" >הוספת מנהל</button></li>
+                                            <li><button onclick="hide_display(4)" style="font-size: 1.5rem;"  class="dropdown-item" >עריכת מנהלים</button></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu__nav-list__item" style="list-style-type: none;">
+                                        <a  style="font-size: 1.5rem;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa-brands fa-shopify"></i> הזמנות
+                                        </a>
+                                        <ul class="dropdown-menu" >
+                                            <li><button onclick="hide_display(9)" class="dropdown-item" style="font-size: 1.5rem;"  >הזמנות</button></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><button onclick="hide_display(11)" class="dropdown-item"  style="font-size: 1.5rem;" >מחיקת הזמנות/סלים</button></li>                
+                                        </ul>
+                                    </li>
+                                    <li class="menu__nav-list__item" >
+                                        <a  style="font-size: 1.5rem;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-gift" aria-hidden="true"></i> קופונים
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><button onclick="hide_display(19)" style="font-size: 1.5rem;" class="dropdown-item" >כל הקופונים</button></li>
+                                            <li><button onclick="hide_display(20)" style="font-size: 1.5rem;"  class="dropdown-item" >יצירת קופון אוטומטי</button></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><button onclick="hide_display(21)" style="font-size: 1.5rem;" class="dropdown-item"  >יצירת קופון אישי</button></li>   
+                                        </ul>                          
+                                    </li>
+                                    <li class="menu__nav-list__item" >
+                                        <a  style="font-size: 1.5rem;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa-sharp fa-regular fa-comment-dots"></i> פניות
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><button onclick="hide_display(24)" style="font-size: 1.5rem;" class="dropdown-item" >כל הפניות</button></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><button onclick="hide_display(25)" style="font-size: 1.5rem;" class="dropdown-item"  >מענה לפנייה</button></li>   
+                                        </ul>                          
+                                    </li>
+                                    <li class="menu__nav-list__item" >
+                                        <a  style="font-size: 1.5rem;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa-solid fa-map"></i> מפת האתר
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><button onclick="hide_display(26)" style="font-size: 1.5rem;" class="dropdown-item" >מפת האתר</button></li>
+                                            
+                                        </ul>                          
+                                    </li>
+                                    <li class="menu__nav-list__item" >
+                                        <a  style="font-size: 1.5rem;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa-solid fa-chart-simple"></i> דוחות
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><button onclick="hide_display(28)" style="font-size: 1.5rem;" class="dropdown-item" >דוחות הזמנות</button></li>
+                                            
+                                        </ul>                          
+                                    </li>
+                                </ul>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+
+        <div class="link"></div><div class="link"></div>
+        <div id="your-div-id">
+            <article  style="direction: rtl; display:none;" id="1" >
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner text-center ">
+                        <div style="direction:rtl;" >
+                            <h4 class="card-title mt-3 text-center">ייבוא מוצרים אוטומטי מהדרייב</h4>
+                            <div class="user__tel">
+                               <input type="text" id="emailImport" class="user__tel-number"  placeholder="מייל לקבלת דוח ייבוא" />
+                            </div> 
+                            <div class="form-group">
+                                <br>
+                                <button  class="btn btn-primary" id="import-button"> הרץ ייבוא </button>
+                                <a class="btn btn-primary" href="https://docs.google.com/spreadsheets/d/1_W1MGt8MtBVlqTcQgU-eKblraMWSXi_-cDKeqTRy_X4/edit#gid=0">ניהול הדרייב</a>
+                            </div> 
+                             <h3 class="card-title mt-3 text-center" style="color:crimson;"> מנהלים יקרים כל פעולה רגישה וקריטית שימו לב!</h3>   
+                        </div>        
+                    </div>
+                </div>
+            </article>
+            <article class="card-body mx-auto" style="direction: rtl; display:none;" id="7" >
+                <div class="intro-text left-0 text-center p-5 rounded">
+                    <h3 class="card-title mt-3 text-center"> ייבוא קטגוריות אוטומטי מהדרייב</h3>
+                    <button  class="btn btn-primary" id="category_import_btn"> הרץ ייבוא </button>
+                    <a class="btn btn-primary" href="https://docs.google.com/spreadsheets/d/1_W1MGt8MtBVlqTcQgU-eKblraMWSXi_-cDKeqTRy_X4/edit#gid=0">ניהול הדרייב</a>
+                </div>
+            </article>  
+            <article class="card-body mx-auto" style="direction: rtl; display:none;" id="2" >
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner text-center ">
+                        <form action="/uploadpic" method="POST" enctype="multipart/form-data"  id="upload-form">
+                            <label for="ProdPic">בחר תמונה למוצר</label><br>
+                            <input class="user__tel-number" type="file" name="ProdPic" id="ProdPic"><br>
+                            <span>הערה! שם התמונה חייב להיות כמק״ט המוצר </span><br>
+                            <input class="btn btn-primary" type="submit" value="העלה תמונה" id="upload-btn">
+                        </form>
+                    </div>
+                    <div id="download-section" style="text-align: center;"></div>
+                </div>
+            </article>
+            <article class="card-body mx-auto" style="direction: rtl; display:none;" id="16" >
+                <div class="intro-text left-0 text-center p-5 rounded">
+                    <label for="ProdPic_delete">שם קובץ תמונה</label><br>
+                    <input class="form-control" type="text" name="ProdPic_delete" id="ProdPic_delete"><br>
+                    <span>הערה! שם הקובץ חייב להיות כמק״ט המוצר </span><br>
+                    <input class="btn btn-primary" id="delete_image_" value="מחק תמונה" >
+                    <h1 id="ltl_delete"></h1>
+                </div>
+            </article>
+            <section class="page-section clearfix" id="3" style="display: none;">
+                <h1  style="color: #e6a756;" class="card-title mt-3 text-center">מוצרים</h1>
+                <div style="direction: rtl; text-align:center;">
+                    <h5 style="color: #e6a756;" >שורות בעמוד</h5>
+                    <select id="rows-per-page-prods" class="search__btn">
+                            <option value="10" selected>10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                    </select>
+                    <br>
+                    <nav aria-label="Table navigation">
+                        <ul style="text-align:center;" >
+                            <li class="page-item" >
+                            <a class="page-link" href="#" id="next-page-btn-prods" aria-label="Next">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="">דף הבא</span>
+                                </a>    
+                            </li><br>
+                            <li class="page-item"  >
+                                <a class="page-link" href="#" id="prev-page-btn-prods" aria-label="Previous">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="">דף קודם</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                   <h5 class="page-link"  id="current-page-text"></h5>
+                    
+                </div>
+                <table class="table table-striped custab">
+                   
+                    <thead> 
+                        <tr>
+                            <th></th>
+                            <th>איידי</th>
+                            <th>שם מוצר</th>
+                            <th>תמונה</th>
+                            <th>מחיר</th>
+                            <th>תיאור</th>
+                            <th>מקט קטגוריה</th>
+                            <th>מבצע</th>
+                            <th>מלאי</th>
+                            <th>עריכה</th>
+                        </tr>
+                    </thead>      
+                    <tbody id="tbody2"></tbody>
+                </table>
+            </section>
+
+            <article class="card-body mx-auto" id="4" style="display: none;">
+                <table class="table table-striped custab">
+                    <h1 style="color: #e6a756;" class="card-title mt-3 text-center" >מנהלים</h1>
+                    <thead> 
+                        <tr>
+                            <th>איידי</th>
+                            <th>שם משתמש</th>
+                            <th>אימייל </th>
+                            <th>עריכה</th>
+                        </tr>
+                    </thead>      
+                    <tbody id="tbody3"></tbody>
+                </table>
+            </article>
+
+            <article class="card-body mx-auto" style="direction: rtl; display:none;" id="5" >
+                 <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner text-center ">
+                        <h4 class="card-title mt-3 text-center"  >הוסף מנהל</h4>
+                        <h4 class="card-title mt-3 text-center"  >יש לתת בנוסף הרשאה ברמת ה-IP</h4>
+                        <div class="user__tel">
+                            <input id="emailman" class="user__tel-number"  placeholder="אימייל מנהל" type="text" required="required" >     
+                        </div>
+                        <div class="user__tel">
+                            <input id="username_reg" class="user__tel-number"  placeholder="שם משתמש" type="text" required="required" >     
+                        </div>
+                        <div class="user__tel">
+                            <input id="passman" class="user__tel-number"  placeholder="סיסמא מנהל" type="password" required="required" >                     
+                        </div>         
+                        
+                        <button  type="button" onclick="addman()" class="btn btn-primary">  הוסף מנהל </button>  
+                        <h1 style="color:crimson" id="manager_ltl"></h1>      
+                    </div>                                   
+                </div>
+            </article>
+
+            <article class="card-body mx-auto" id="6" style="display: none;">
+                <table class="table table-striped custab">
+                        <h1 style="color: #e6a756;" class="card-title mt-3 text-center" > חברי מועדון מאומתים</h1>
+                        <thead>
+                            <tr>
+                                <th>אימייל</th>
+                                <th>שם פרטי</th>
+                                <th>שם משפחה</th>
+                                <th>טלפון</th>
+                                <th>כתובת</th>
+                                <th>תאריך לידה</th>
+                                <th>עריכה</th>
+                            </tr>    
+                        </thead>      
+                        <tbody id="tbody"></tbody>
+                    </table>
+            </article>
+
+            <article class="card-body mx-auto" id="12" style="display: none;" >
+                <table class="table table-striped custab">
+                        <h1 style="color: #e6a756;" class="card-title mt-3 text-center" > כל חברי מועדון </h1>
+                        <thead>
+                            <tr>
+                                <th>אימייל</th>
+                                <th>שם פרטי</th>
+                                <th>שם משפחה</th>
+                                <th>טלפון</th>
+                                <th>כתובת</th>
+                                <th>תאריך לידה</th>
+                                <th>עריכה</th>
+                            </tr>    
+                        </thead>      
+                        <tbody id="tbody_12"></tbody>
+                    </table>
+            </article>
+
+            <article class="card-body mx-auto" id="13" style="display: none;" >
+                <table class="table table-striped custab">
+                        <h4 style="color: #e6a756;" class="card-title mt-3 text-center" > לא מאומתים</h4>
+                        <thead>
+                            <tr>
+                                <th>אימייל</th>
+                                <th>שם פרטי</th>
+                                <th>שם משפחה</th>
+                                <th>טלפון</th>
+                                <th>כתובת</th>
+                                <th>תאריך לידה</th>
+                                <th>עריכה</th>
+                            </tr>    
+                        </thead>      
+                        <tbody id="tbody_13"></tbody>
+                    </table>
+            </article>
+
+            <section class="page-section clearfix" id="9" style="display: none;">
+                <div id="table_container_orders">
+                <table class="table table-striped custab">
+                        <h1 style="color: #e6a756;" class="card-title mt-3 text-center" >הזמנות</h1>
+                        <thead>
+                            <tr>
+                                <th>מספר הזמנה</th>
+                                <th>סטטוס</th>             
+                                <th> צפייה בהזמנה</th>
+                                <th>מחיקת הזמנה</th>
+                                <th>עריכת סטטוס</th>
+                                <th>תשלום</th>
+                                <th>שילוח</th>
+                            </tr>    
+                        </thead>      
+                        <tbody id="tbody_orders"></tbody>
+                </table>
+                </div>
+            </section>
+            
+            <article class="card-body mx-auto" style="direction: rtl; display:none;" id="10" > 
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner text-center ">
+                        <h3 id="res_run" class="card-title mt-3 text-center" style="color:crimson;"> מנהלים יקרים כל פעולה רגישה וקריטית שימו לב!</h3>
+                        <li class="expert-item-toolbar-item">
+                           <a style="font-size: 2rem;">1.</h4>&nbsp; <button  data-active="true" type="button" id="backup_to_db"  class="btn btn-primary expert-item-toolbar-button"> גיבוי קבצים לDB</button>  
+                            <a class="info" style="direction: rtl; list-style-type: none;">מעביר את קבצי הpdf מתיקיית public אל הדאטה בייס </a>
+                        </li><br>
+                        <li class="expert-item-toolbar-item">
+                            <a style="font-size: 2rem;">2.</a>&nbsp;<button  type="button" id="backup_to_folder" class="btn btn-primary"> קריאת קבצים DB</button>
+                            <a class="info" style="direction: rtl; list-style-type: none;"> קריאת קבצי הpdf מתוך הדאטה בייס לתוך תיקיית public </a>
+                        </li>  <br>
+                        <li class="expert-item-toolbar-item">
+                            <a style="font-size: 2rem;">3.</a>&nbsp;<button  type="button" id="clear_db_collection"  class="btn btn-primary"> ניקוי קבצי DB</button> 
+                            <a class="info" style="direction: rtl; list-style-type: none;"> מנקה את הקולקשיין בדאטה בייס ולא את תיקיית public  </a>
+                        </li> 
+                    </div>
+                </div>                    
+            </article>
+            <article class="card-body mx-auto" style="direction: rtl; display:none;" id="11" >
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner text-center ">
+                        <h3 class="card-title mt-3 text-center" style="color:crimson;"> מנהלים יקרים כל מחיקה היא פעולת אל-חזור שימו לב!</h3>
+                        <li class="expert-item-toolbar-item">
+                            <a style="font-size: 2rem;">1.</a>&nbsp; <button class="btn btn-primary" id="delete_orders">מחיקת הזמנות</button>  
+                            <a class="info" style="direction: rtl; list-style-type: none;margin-left:20%;">מוחק את כל ההזמנות מהדאטה בייס!! </a>
+                        </li><br><br>
+                        <li class="expert-item-toolbar-item">
+                           <a style="font-size: 2rem;">2.</a>&nbsp; <button class="btn btn-primary" id="clear_carts">מחיקת סלים פעילים</button>
+                           <a class="info" style="direction: rtl; list-style-type: none; margin-left:20%;margin-top:5%;">מוחק את כל הסלים בשרת!! </a>
+                        </li>
+                    </div>
+                </div>    
+            </article>
+            <article class="card-body mx-auto" style="direction: rtl;text-align:center; display:none;" id="8"  >
+                
+                <h1 style="color:#e6a756;">מערכת חוקים</h1>
+                <table id="ruleTable">
+                    <thead>
+                        <tr id="keys_row">
+                        <th>מחיקה</th>
+                        <th>מאפיין</th>
+                        <th>תנאי</th>
+                        <th>ערך</th>
+                        <th>תנאי לוגי</th>
+                        <th>מאפיין שני</th>
+                        <th>תנאי שני</th>
+                        <th>ערך שני</th>
+                        <th>השמה</th>
+                        <th>סיום</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody_rules">
+                    </tbody>
+                </table>
+                <button class="btn btn-primary" id="addRuleBtn">הוסף חוק</button><br><br>
+                <script src="../public/js/rulesmanag.js"></script>
+                
+            </article>
+            <article class="card-body mx-auto" style="direction: rtl; display:none;" id="14" >
+                <form action="/save_banner_rashi" method="POST" enctype="multipart/form-data" id="banner_rashi_form" >
+                    <div class="intro-text left-0 text-center  p-5 rounded">
+                        <h1>באנר ראשי דף הבית</h1> 
+
+                        <h4>בחרו קטגורייה לקישור מוביל על הבאנר</h4>
+                        <select class="user__tel-number" id="view_category_select3"> </select>
+                        <h3>כותרת הבאנר</h3>             
+                        <div id="coteret_rashit"></div>
+                        
+                        <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+                        <script>
+                            var quill3 = new Quill('#coteret_rashit', {
+                            theme: 'snow',
+                            direction: 'rtl'
+                            });
+                        </script>
+
+                        <label for="banner_rashi_pic">בחרו תמונה באנר ראשי</label>
+                        <div class="center-container">
+                            <img src="" id="preview_image_banner_rahsi" >
+                        </div>
+                        <input class="user__tel-number" style="direction: ltr; " type="file" name="banner_rashi_pic" id="banner_rashi_pic">
+                        <button class="btn btn-primary" type="submit" id="save_banner_rashi_btn">שמירה</button><br>
+                        <h1 id="banner_rashi_literal" class="save_literal"></h1>
+                    </div> 
+                </form>
+
+                <hr style="margin-top:20px;height: 3px; background-color: black; background-color: black;">    
+                 <div class="intro-text left-0 text-center p-5 rounded">
+                    <h1>באנר קרוסלת מוצרים בדף הבית</h1>
+                    <h3>בחרו קטגוריית מוצרים לקרוסלה</h3>
+                    <select class="user__tel-number" id="view_category_select"> </select>
+                    <h1>כותרת הבאנר</h1>
+                    <div style="direction: rtl;" id="editor"></div>
+                    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+                    <script>
+                        var quill = new Quill('#editor', {
+                        theme: 'snow',
+                        direction: 'rtl'
+                        });
+                    </script>
+                    {{!-- <input type="text" id="title_of_banner" class="user__tel-number" placeholder="מלל שיווקי" > --}}
+                    <button class="btn btn-primary" id="save_button">שמירה</button><br>
+                    <h1 id="banner_prods_crosela_literal" class="save_literal"></h1>
+                    
+
+                </div>    
+                <hr style="margin-top:20px;height: 3px; background-color: black; background-color: black;">    
+                <div class="intro-text left-0 text-center p-5 rounded">
+                    <form action="/save_categories_banners" method="POST" enctype="multipart/form-data" id="categories_banners">
+                        <h1>קטגוריות בדף הבית</h1>
+                        <ul>
+                            <span class="span_cats">קטגוריה ראשונה:</span>
+                            <li>
+                                <div class="container">
+                                    <div class="inner-elements">
+                                        <img id="catpic_1">
+                                        <select class="user__tel-number" id="view_category_select4"></select>
+                                        <input class="user__tel-number" id="cot1" type="text" placeholder="כותרת">
+                                        <input class="user__tel-number" type="file" name="catfile" id="catfile" multiple>
+                                    
+                                    </div>
+                                </div> 
+                            </li>
+                            <span class="span_cats">קטגוריה שניה:</span>
+                            <li>
+                                <div class="container">
+                                    <div class="inner-elements">
+                                        <img id="catpic_2" >
+                                        <select class="user__tel-number" id="view_category_select5"></select>
+                                        <input class="user__tel-number" id="cot2" type="text" placeholder="כותרת">
+                                        <input class="user__tel-number" type="file" name="catfile" id="catfile" multiple>
+                                        
+                                    </div>
+                                </div> 
+                            </li>
+                            <span class="span_cats">קטגוריה שלישית:</span>
+                            <li>
+                                <div class="container">
+                                    <div class="inner-elements">
+                                        <img id="catpic_3" >
+                                        <select class="user__tel-number" id="view_category_select6"></select>
+                                        <input class="user__tel-number" id="cot3" type="text" placeholder="כותרת">
+                                        <input class="user__tel-number" type="file" name="catfile" id="catfile" multiple>
+                                    
+                                    </div>
+                                </div> 
+                            </li>
+                            <span class="span_cats">קטגוריה רביעית:</span>
+                            <li>
+                                <div class="container">
+                                    <div class="inner-elements">
+                                        <img id="catpic_4" >
+                                        <select class="user__tel-number" id="view_category_select7"></select>
+                                        <input class="user__tel-number" id="cot4" type="text" placeholder="כותרת">
+                                        <input class="user__tel-number" type="file" name="catfile" id="catfile" multiple>
+                                        
+                                    </div>
+                                </div> 
+                            </li>
+                            <span class="span_cats">קטגוריה חמישית:</span>
+                            <li>
+                                <div class="container">
+                                    <div class="inner-elements">
+                                        <img id="catpic_5" >
+                                        <select class="user__tel-number" id="view_category_select8"></select>
+                                        <input class="user__tel-number" id="cot5" type="text" placeholder="כותרת">
+                                        <input class="user__tel-number" type="file" name="catfile" id="catfile" multiple>
+                                    
+                                    </div>
+                                </div> 
+                            </li>
+                            <span class="span_cats">קטגוריה שישית:</span>
+                            <li>
+                                <div class="container">
+                                    <div class="inner-elements">
+                                        <img id="catpic_6" >
+                                        <select class="user__tel-number" id="view_category_select9"></select>
+                                        <input class="user__tel-number" id="cot6" type="text" placeholder="כותרת">
+                                        <input class="user__tel-number" type="file" name="catfile" id="catfile" multiple>
+                                    
+                                    </div>
+                                </div> 
+                            </li>
+                        </ul>
+                        <h1 id="banner_categories_literal" class="save_literal"></h1><br>
+                        <button class="btn btn-primary" type="submit" id="savecatpics">שמירה</button>
+                        
+                    </form>    
+                </div>
+            </article>
+            <article class="card-body mx-auto" style="direction: rtl; display:none;" id="15" >
+                <div class="intro-text left-0 text-center p-5 rounded">
+                    <h1>באנר תדמית עמוד מוצרים</h1>
+                    <h6>בחר קטגוריה</h6>
+                    <select class="user__tel-number" id="view_category_select2"> </select>
+                    <h1>כותרת הבאנר</h1>
+                    <div style="direction: rtl;" id="title_of_banner_prods"></div>
+                    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+                    <script>
+                        var quill2 = new Quill('#title_of_banner_prods', {
+                        theme: 'snow',
+                        direction: 'rtl'
+                        });
+                    </script>
+                    {{!-- <input type="text" id="title_of_banner_prods" class="user__tel-number" placeholder="מלל שיווקי" > --}}
+                    <button class="btn btn-primary" id="save_button_prods">שמירה</button><br>
+                    <h1 id="banner_prods_literal" class="save_literal"></h1>
+                </div>
+                <hr>
+            </article>
+            <section class="page-section clearfix" id="17" style="display: none;">
+                <h1 style="color: #e6a756;" class="card-title mt-3 text-center" >לוגים</h1>
+                <div  style="direction: rtl; text-align:center;">
+                    <h5 style="color: #e6a756;" >שורות בעמוד</h5>
+                    <select id="rows-per-page" class="search__btn"  >
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select><br>
+                    <nav aria-label="Table navigation">
+                        <ul style="text-align:center;" >
+                            <li class="page-item">
+                                <a class="page-link" href="#" id="next-page-btn" aria-label="Next">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="">דף הבא</span>
+                                </a>    
+                            </li><br>
+                            <li class="page-item" >
+                                <a class="page-link" href="#" id="prev-page-btn" aria-label="Previous">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="">דף קודם</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <h5 class="page-link"  id="current-page-logs"></h5>
+                </div>
+                <table class="table table-striped custab">
+        
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>לוג איידי</th>
+                            <th>סוג לוג</th>             
+                            <th> שם פעולה</th>
+                            <th>תוכן הפעולה</th>
+                            <th>פרטי משתמש</th>
+                            <th>פרטי מנהל</th>
+                            <th>תאריך</th>
+                        </tr>    
+                    </thead>      
+                    <tbody id="tbody_logs"></tbody>
+                </table>
+            </section>
+
+            <article class="card-body mx-auto" id="18" style="display: none;">
+                    <div class="intro-text left-0 p-5 rounded " style="direction: rtl;">
+                        
+                        <div class="container" style="background-color:#FFFFFF; border:2px solid black;border-radius:10px;">
+                            <div id="products_col" class="tab">
+                                <a class="a_tab" >מוצרים<button class="toggle-btn" onclick="toggleSection('products_col')" > <i class="fa fa-plus" aria-hidden="true"></i> </button></a>
+                                <ol style="display: none;">
+                                    <button onclick="hide_display(1)" class="dropdown-item">ייבוא מוצרים - <span>( ייבוא אוטומטי מהדרייב)</span></button>
+                                    <button onclick="hide_display(3)" class="dropdown-item">עריכת מוצרים- <span>(מחיקה וצפייה במוצרים)</span></button>
+                                    <button onclick="hide_display(2)" class="dropdown-item" >העלאת תמונת מוצר</button>
+                                    <button onclick="hide_display(16)" class="dropdown-item">מחיקת תמונת מוצר</button>
+                                </ol>
+                            </div>
+                            <div id="members_col" class="tab" >
+                                <a class="a_tab" >חברי מועדון<button class="toggle-btn" onclick="toggleSection('members_col')"><i class="fa fa-plus" aria-hidden="true"></i></button></a>
+                                <ol style="display: none;">
+                                <button onclick="hide_display(12)" class="dropdown-item">כל חברי מועדון</button>
+                                <button onclick="hide_display(6)" class="dropdown-item"> חברי מועדון מאומתים</button>
+                                <button onclick="hide_display(13)" class="dropdown-item"> חברי מועדון לא מאומתים</button>
+                                </ol>
+                            </div>
+                            <div id="orders_col" class="tab">
+                                <a class="a_tab" >הזמנות<button class="toggle-btn" onclick="toggleSection('orders_col')"><i class="fa fa-plus" aria-hidden="true"></i></button></a>
+                                <ol style="display: none;">
+                                    <button onclick="hide_display(9)" class="dropdown-item">הזמנות</button>
+                                    <button onclick="hide_display(11)" class="dropdown-item">מחיקת הזמנות/סלים</button>
+                                </ol>
+                            </div>
+                            <div id="rules_col" class="tab">
+                                <a class="a_tab" > מערכת חוקים<button class="toggle-btn" onclick="toggleSection('rules_col')"><i class="fa fa-plus" aria-hidden="true"></i></button></a>
+                                <ol style="display: none;">
+                                <button onclick="hide_display(8)" class="dropdown-item">יצירת חוקים</button>
+                                </ol>
+                            </div>
+                            <div id="managers_col" class="tab">
+                                <a class="a_tab" >מנהלים<button class="toggle-btn" onclick="toggleSection('managers_col')"><i class="fa fa-plus" aria-hidden="true"></i></button></a>
+                                <ol style="display: none;">
+                                <button onclick="hide_display(5)" class="dropdown-item">הוספת מנהל</button>
+                                <button onclick="hide_display(4)" class="dropdown-item">עריכת מנהלים</button>
+                                <button onclick="hide_display(17)" class="dropdown-item">לוגים</button>
+                                <button onclick="hide_display(10)" class="dropdown-item">קבצי PDF</button>
+                                </ol>
+                            </div>
+                            <div id="view_col" class="tab">
+                                <a class="a_tab" >עיצוב האתר<button class="toggle-btn" onclick="toggleSection('view_col')"><i class="fa fa-plus" aria-hidden="true"></i></button></a>
+                                <ol style="display: none;">
+                                <button onclick="hide_display(14)" class="dropdown-item">דף הבית</button>
+                                <button onclick="hide_display(15)" class="dropdown-item">דף עמוד מוצרים</button>
+                                </ol>
+                            </div>
+                            <div id="category_col" class="tab">
+                                <a class="a_tab" >קטגוריות<button class="toggle-btn" onclick="toggleSection('category_col')"><i class="fa fa-plus" aria-hidden="true"></i></button></a>
+                                <ol style="display: none;">
+                                <button onclick="hide_display(7)" class="dropdown-item">עריכת קטגוריות</button>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+            </article>
+            <section class="page-section clearfix" id="19" style="display: none;">
+                <h1 style="color: #e6a756;" class="card-title mt-3 text-center" >קופונים</h1>
+                <div  style="direction: rtl; text-align:center;">
+                    <h5 style="color: #e6a756;" >שורות בעמוד</h5>
+                    <select id="rows-per-page_coupons" class="search__btn"  >
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select><br>
+                    <nav aria-label="Table navigation">
+                        <ul style="text-align:center;" >
+                            <li class="page-item">
+                                <a class="page-link" href="#" id="next-page-btn_coupons" aria-label="Next">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="">דף הבא</span>
+                                </a>    
+                            </li><br>
+                            <li class="page-item" >
+                                <a class="page-link" href="#" id="prev-page-btn_coupons" aria-label="Previous">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="">דף קודם</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <h5 class="page-link"  id="current-page-coupons"></h5>
+                </div>
+                <table class="table table-striped custab">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>קוד קופון</th>
+                            <th>סוג הנחה</th>             
+                            <th>שם קופון</th>
+                            <th>תיאור קופון</th>
+                            <th>כמות ההנחה</th>
+                            <th>תאריך יצירה</th>
+                            <th>פעיל</th>
+                        </tr>    
+                    </thead>      
+                    <tbody id="tbody_coupons"></tbody>
+                </table>
+            </section>
+            <section class="page-section clearfix" id="20" style="display: none;">
+                <h1 style="color: #e6a756;" class="card-title mt-3 text-center">קופונים</h1>
+                <div class="col-xl-9 mx-auto">
+                    <div style="direction: rtl;" class="cta-inner text-center ">
+                        <h5 style="color: #e6a756;">סוג הנחה</h5>
+                        <select id="TypeSale_coupon" class="user__tel-number">
+                            <option value="%" selected>הנחה באחוזים</option>
+                            <option value="$">הנחה בכסף</option>
+                        </select>
+                        <input class="user__tel-number" type="text" id="name_coupon" placeholder="שם הקופון" />
+                        <input class="user__tel-number" type="text" id="shortDescription_coupon" placeholder="תיאור קצר" />
+                        <input class="user__tel-number" type="text" id="valueSale_coupon" placeholder="סכום ההנחה" />
+                        <input class="user__tel-number" type="text" id="length_of_coupon_code" placeholder="אורך קוד הקופון" />
+                        <input class="user__tel-number" type="text" id="numbers_of_coupons" placeholder="מספר הקופונים" />
+                        <button class="btn btn-primary" onclick="Generate_coupon()">צור קופונים</button>
+                    </div>
+                </div>
+           
+            </section>
+            <section class="page-section clearfix" id="21" style="display: none;">
+                <h1 style="color: #e6a756;" class="card-title mt-3 text-center">קופונים</h1>
+                <div class="col-xl-9 mx-auto">
+                    <div style="direction: rtl;" class="cta-inner text-center ">
+                        <h5 style="color: #e6a756;">סוג הנחה</h5>
+                        <select id="TypeSale_coupon_personal" class="user__tel-number">
+                            <option value="%" selected>הנחה באחוזים</option>
+                            <option value="$">הנחה בכסף</option>
+                        </select>
+                        <input class="user__tel-number" type="text" id="coupon_code_personal" placeholder="קוד הקופון" />
+                        <input class="user__tel-number" type="text" id="name_coupon_personal" placeholder="שם הקופון" />
+                        <input class="user__tel-number" type="text" id="shortDescription_coupon_personal" placeholder="תיאור קצר" />
+                        <input class="user__tel-number" type="text" id="valueSale_coupon_personal" placeholder="סכום ההנחה" />
+                        <button class="btn btn-primary" onclick="Create_coupon()">צור קופון</button>
+                    </div>
+                </div>
+           
+            </section>
+            <section class="page-section clearfix" id="22" style="display: none;">
+                <h1 style="color: #e6a756;" class="card-title mt-3 text-center">מורשי IP</h1>
+                <div class="col-xl-9 mx-auto">
+                    <div style="direction: rtl;" class="cta-inner text-center">
+                        <form id="ipWhitelistForm">
+                            <div id="inputContainer">
+                                <div class="field-wrapper">
+                                    <div class="form-group">
+                                        <label for="ipInput">IP Address:</label>
+                                        <input type="text" class="form-control" id="ipInput" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nameInput">Name:</label>
+                                        <input type="text" class="form-control" id="nameInput" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" type="button" id="addAfter">Add More</button><br><br>
+                            <button class="btn btn-primary" type="submit">Save</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="page-section clearfix text-center" id="23" style="display: none;">
+                <button class="btn btn-primary " onclick="set_redirects()" type="button">הרץ ריידרייקטים למוצרים</button>
+                <h1 style="color: #e6a756;" class="card-title mt-3 text-center">הפניות URL Redirect</h1>
+                <div class="col-xl-9 mx-auto">
+                    <div style="direction: rtl;" class="cta-inner text-center">
+                    <form id="urlRedirectForm">
+                        <div id="urlInputContainer">
+                        <div class="url-field-wrapper row">
+                            <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="urlInput">Request path:</label>
+                                <input type="text" class="form-control" name="url" required>
+                            </div>
+                            </div>
+                            <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="redirectInput">Target path:</label>
+                                <input type="text" class="form-control" name="redirect" required>
+                            </div>
+                            </div>
+                            <div class="col-md-2">
+                            <button type="button" class="delete-button btn btn-primary"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        </div>
+                        <button class="btn btn-primary" type="button" id="addUrl">Add More</button><br><br>
+                        <button class="btn btn-primary" type="submit">Save</button>
+                    </form>
+                    </div>
+                </div>
+            </section>
+            <section class="page-section clearfix" id="24" style="display: none;">
+                <h1 style="color: #e6a756;" class="card-title mt-3 text-center"> כל הפניות </h1>
+                <div class="col-xl-9 mx-auto">
+                    <div style="direction: rtl;" class="cta-inner text-center">
+                         <table class="table table-striped custab">   
+                            <thead> 
+                                <tr>
+                                    <th></th>
+                                    <th>איידי</th>
+                                    <th>שם</th>
+                                    <th>שם משפחה</th>
+                                    <th>מייל</th>
+                                    <th>טלפון</th>
+                                    <th>גוף הפנייה</th>
+                                    <th>עריכה</th>
+                                </tr>
+                            </thead>      
+                    <tbody id="tbody_content"></tbody>
+                </table>
+                    </div>
+                </div>
+            </section>
+            <section class="page-section clearfix" id="25" style="display: none;">
+                 <h1 style="color: #e6a756;" class="card-title mt-3 text-center"> נא לבחור פנייה <i class="fa-sharp fa-regular fa-comment-dots"></i></h1>
+                    <select id="select_content" class="search__btn"> 
+                        <option value="">נא לבחור פנייה</option>
+                    </select>
+                    <div id="content_form" style="display: none;">
+                        <h1 id="usid_header" class="card-title mt-3 text-center"></h1>
+                            <div class="page-section">
+                                <div class="row">
+                                <div class="col-xl-9 mx-auto">
+                                    <div class="cta-inner text-center ">
+                                    <div class="card-body mx-auto" style="direction:rtl;">
+                                        
+      
+                                        <div class="user__tel">
+                                            <i style="font-size: 15px;" class="fa fa-user"></i>&nbsp; 
+                                            <input id="FirstName" class="user__tel-number"  type="text" readonly="true"  >
+                                        </div> 
+                                        <div class="user__tel">
+                                            <i class="fa fa-address-book" style="font-size: 15px;"></i>&nbsp; 
+                                            <input id="LastName" class="user__tel-number"  type="text"  readonly="true">
+                                        </div> 
+                                        <div class="user__tel">
+                                            <i class="fa fa-envelope" style="font-size: 15px;" ></i> &nbsp;
+                                            <input id="Email" class="user__tel-number"  type="email"  readonly="true"></input> 
+                                        </div> 
+                                        <div class="user__tel">
+                                            <i class="fa fa-phone" style="font-size: 15px;"></i>  &nbsp; 
+                                            <input id="Phone" class="user__tel-number"  type="text"  readonly="true">
+                                        </div> 
+                                        
+                                        <div class="user__tel">
+                                            <i class="fa fa-address-card" style="font-size: 15px;"></i> &nbsp;
+                                            <textarea id="Content" class="user__tel-number"  style="height: auto;"  readonly="true"></textarea>
+                                        </div>
+                                         <div class="user__tel">
+                                            <i class="fa fa-address-card" style="font-size: 15px;"></i> &nbsp;
+                                            <textarea id="Manager_response" class="user__tel-number"  style="height: auto;"  ></textarea>
+                                        </div>
+                                        <div id="form-groupbtn" class="form-group">
+                                            
+                                            
+                                        </div>    
+                                                        
+           
+                                    </div>        
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                    </div>
+            </section>
+            <section class="page-section clearfix" id="26" style="display: none;">
+                <h1 style="color: #e6a756;" class="card-title mt-3 text-center">  מפת האתר </h1>
+         
+                
+                <a href="/sitemap" > <img class="sitemappic" src="../public/pics/sitemap.png" alt=""></a>
+                
+            </section>
+            <section class="page-section clearfix text-center" id="27">
+                <h1 style="font-size: 4rem ;" class="text-center"> שאלות נפוצות</h1>
+                <div class="col-xl-9" id="faq">
+                    <div class="col-xl-9" >
+                        <a href="#importqus" data-bs-toggle="collapse" aria-expanded="false" aria-controls="importqus" class="list-group-item list-group-item-action">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mb-1" style="margin-right: 3%;">1.</h5>
+                            </div>
+                            <p class="mb-1" dir="rtl">
+                                מה זה ייבוא מוצרים?
+                            </p>
+                            <div class="collapse mt-3" id="importqus">
+                                
+                                ייבוא מוצרים זהו תהליך שבו השרת קורא מתוך קובץ CSV את המוצרים של הקטלוג.<br> השרת שומר ומעדכן את הנתונים במסד הנתונים.
+                            
+                            </div>
+                        </a>
+                        <a href="#couponsqus" data-bs-toggle="collapse" aria-expanded="false" aria-controls="couponsqus" class="list-group-item list-group-item-action">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mb-1" style="margin-right: 3%;">2.</h5>
+                            </div>
+                            <p class="mb-1" dir="rtl">
+                                איך יוצרים קופונים?
+                            </p>
+                            <div class="collapse mt-3" id="couponsqus">
+                                
+                            קופון אישי - יוצרים קוד קופון אישי ומגדירים את ההנחה <br>
+                                קופון אוטומטי - יוצרים כמה קופונים ומקבלים קודי קופון אוטומטיים וכן מגדירים את ההנחה </h6>
+                            
+                            </div>
+                        </a>
+                        <a href="#rulesqus" data-bs-toggle="collapse" aria-expanded="false" aria-controls="rulesqus" class="list-group-item list-group-item-action">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mb-1" style="margin-right: 3%;">3.</h5>
+                            </div>
+                            <p class="mb-1" dir="rtl">
+                                מה אלו מערכת החוקים?
+                            </p>
+                            <div class="collapse mt-3" id="rulesqus">
+                                
+                            אלו הם בעצם חוקי קטלוג החלים רק על חברי מועדון  לכל חוק יש הגדרות ואפשרויות משלו<br> לדוגמא - 3 מארזי קפה ב200 ש"ח 
+                            
+                            
+                            </div>
+                        </a>
+                        <a href="#viewsqus" data-bs-toggle="collapse" aria-expanded="false" aria-controls="viewsqus" class="list-group-item list-group-item-action">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mb-1" style="margin-right: 3%;">4.</h5>
+                            </div>
+                            <p class="mb-1" dir="rtl">
+                                איך מעצבים את האתר?
+                            </p>
+                            <div class="collapse mt-3" id="viewsqus"> 
+                         
+                                העיצוב נשמר בקבצי הקונפיגורציה של השרת <br>
+                                יש לעלות תמונות נקיות לכתוב מלל הקשור לאותו תוכן <br>
+                                עיצוב האתר-> דף הבית/ עמודי מוצר<br>
+                                יש לשמור בעת סיום העלאת תמונות או עריכה 
+
+                            </div>
+                        </a>
+                        <a href="#managerqus" data-bs-toggle="collapse" aria-expanded="false" aria-controls="managerqus" class="list-group-item list-group-item-action">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mb-1" style="margin-right: 3%;">5.</h5>
+                            </div>
+                            <p class="mb-1" dir="rtl">
+                                איך מוסיפים מנהל חדש?
+                            </p>
+                            <div class="collapse mt-3" id="managerqus"> 
+                         
+                                כאן במערכת הניהול בלבד <br>
+                                חשוב לתת הרשאה לכל מנהל ברמת האייפי שלו 
+                            </div>
+                        </a>
+                        <a href="#help_dev" data-bs-toggle="collapse" aria-expanded="false" aria-controls="help_dev" class="list-group-item list-group-item-action">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mb-1" style="margin-right: 3%;">6.</h5>
+                            </div>
+                            <p class="mb-1" dir="rtl">
+                                מה עושים אם יש בעיות באתר?
+                                 
+                            </p>
+
+                            <div class="collapse mt-3" id="help_dev"> 
+                                
+                                <a href="mailto:zilbermannsimon60@gmail.com"><p>אם יש בעיות באתר, ניתן לשלוח מייל למתכנתים: </p> סימון מתכנת</a><br>                        
+                                <a href="mailto:raz62015@gmail.com">רז מתכנת</a>
+                                <p dir="rtl">
+                                    במקרה של תקלה קיצונית שמשביתה את האתר,<br> יש לחייג ל- <a href="tel:+972543018677">רז</a>.
+                                </p> 
+                          
+                                
+                            </div>
+                           
+
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page-section clearfix text-center" id="28" style="display: none;" >
+                
+                <canvas id="myChart" width="800" height="400"></canvas>
+            </section>
+
+
+
+
+
+
+        </div> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    <script src="../public/js/wmhbs.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>

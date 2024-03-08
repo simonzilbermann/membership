@@ -1,0 +1,270 @@
+
+
+tr{
+    background-color: bisque;
+}
+.custab{
+border: 1px solid #ccc;
+padding: 5px;
+margin: 5% 0;
+box-shadow: 3px 3px 2px #ccc;
+transition: 0.5s;
+}
+.custab:hover{
+box-shadow: 3px 3px 0px transparent;
+transition: 0.5s;
+}
+    #custom-search-form {
+    margin:0;
+    margin-top: 5px;
+    padding: 0;
+}
+
+#custom-search-form .search-query {
+    padding-right: 3px;
+    padding-right: 4px \9;
+    padding-left: 3px;
+    padding-left: 4px \9;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: width  0.2s ease-in-out;
+-moz-transition:width  0.2s ease-in-out;
+-o-transition: width  0.2s ease-in-out;
+transition: width  0.2s ease-in-out;
+}
+
+#custom-search-form button {
+    border: 0;
+    background: none;
+    /** belows styles are working good */
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: relative;
+    left: -28px;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.search-query:focus + button {
+    z-index: 3;   
+}   
+.search-query:focus{
+    width: 260px;
+}   
+
+.sticystyle{
+    background-color: lightgray;
+    opacity: 0.7;
+    max-width: 300px;
+}
+@media only screen and (max-width: 768px) {
+
+    table thead {
+        display: none;
+    }
+    table td {
+    display: block;
+    text-align: center;
+      
+    }
+    table td::before {
+        content: attr(data-label);
+       float: left;
+        font-weight: bold;
+        direction: rtl;
+    }
+    table td img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    }
+    table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    text-align: center;
+    padding: 8px;
+
+    }
+
+
+    table td:last-child {
+    border-bottom: none;
+    }
+    }
+
+
+
+
+    #ruleTable {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+
+      #ruleTable, th, #ruleTable, td {
+        padding: 8px;
+       
+      }
+
+      
+
+      #ruleTable,.ntable,th, td:last-child {
+        text-align: center;
+      }
+      .custom-select {
+        
+        font-size: 1rem;
+        color: #212529;
+        background-color: #fff;
+        border: 1px solid #212529;
+        border-radius: 0.25rem;
+        
+        
+      }
+      #ruleTable th{
+        background-color:darksalmon;
+      }
+      #ruleTable tr {
+        border: 1px solid black;
+      } 
+       .toggle-btn {
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+@media (max-width: 767px) {
+    ol, ul {
+        padding: 0;
+        margin: 0;
+        font-size: 0.8rem;
+    }
+    .intro-text {
+      padding: 20px;
+    }
+    .toggle-btn {
+      margin-left: 10px;
+    }
+    .card-body {
+      padding: 0;
+    }
+    #products_col, #members_col, #orders_col, #rules_col, #managers_col, #view_col, #category_col {
+      margin-bottom: 15px;
+    }
+    table thead {
+      display: none;
+    }
+    table tbody td:before {
+      content: attr(data-th);
+      font-weight: bold;
+      width: 100px;
+      display: inline-block;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    ol ,ul{
+        padding: 0;
+        margin: 0;
+        font-size: 0.8rem;
+    }
+    .intro-text {
+      padding: 20px;
+    }
+    .toggle-btn {
+      margin-left: 10px;
+    }
+    .card-body {
+      padding: 0;
+    }
+    #products_col, #members_col, #orders_col, #rules_col, #managers_col, #view_col, #category_col {
+      margin-bottom: 15px;
+    }
+    table thead {
+      display: none;
+    }
+    table tbody td:before {
+      content: attr(data-th);
+      font-weight: bold;
+      width: 100px;
+      display: inline-block;
+    }
+   
+  }
+
+  
+  .tab {
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .tab button {
+    background-color: inherit;
+    color: #000;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+  
+  }
+  
+  .tab ol  button.active {
+    background-color: #ccc;
+  }
+  
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+  
+  }
+  .tab ol  button {
+    font-weight: 800;
+    background-color: rgba(47, 23, 15, 0.9);
+    text-align: center;
+    color: #ccc;
+  }
+  .tab ol  button li span{
+    font-size: 14px;
+    font-weight: 200;
+  }
+  
+
+ 
+  @media (max-width: 576px) {
+    table thead {
+      display: none;
+    }
+    table tbody td:before {
+      content: attr(data-th);
+      font-weight: bold;
+      width: 100px;
+      display: inline-block;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .tab {
+      margin-bottom: 10px; /* adjust the value as needed */
+    }
+  
+  }
+  .a_tab{
+  font-size: 2rem;
+   
+    min-width:225px;
+    text-decoration: none;
+    color: black;
+
+  }
+  

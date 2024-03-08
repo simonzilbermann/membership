@@ -1,0 +1,181 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+  /* סגנון כפתור הנגישות */
+  #accessibility-btn {
+
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    position: fixed;
+  }
+  
+
+  /* סגנון תוויות לנגד כל שדה */
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+
+#wraper {
+  background-color: lightgray;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  margin: 0;
+  z-index: 99999; 
+  direction: rtl;
+}
+
+  #accessibility_menu {
+  background-color: #f1f1f1;
+  padding: 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+}
+
+
+#accessibility_menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+#accessibility_menu h3 {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+#accessibility_menu .box {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  background-color: #ddd;
+  color: #333;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+#accessibility_menu .box.wide {
+  display: block;
+  
+}
+
+#accessibility_menu .box span {
+  font-weight: bold;
+  
+}
+
+
+
+#accessibility_menu #accessibility_close {
+  float: left;
+  color: #888;
+}
+
+#accessibility_menu #accessibility_statement {
+  margin-top: 10px;
+  text-align: center;
+}
+ @media screen and (max-width: 480px) {
+    #accessibility_menu {
+      max-width: 200px;
+    }
+    #accessibility-btn {
+      font-size: 16px;
+      padding: 5px;
+    }
+
+    #accessibility_menu {
+      bottom: 10px;
+      right: 10px;
+      padding: 10px;
+    }
+
+    #accessibility_menu h3 {
+      font-size: 16px;
+    }
+
+    #accessibility_menu .box {
+      margin: 2px;
+      padding: 2px;
+    }
+    #accessibility_menu .box.wide {
+      max-width: 19rem;
+      
+    }
+  }
+  .dark-contrast {
+    background-color: #000; 
+    color: #fff; 
+  }
+  .bright-contrast {
+    background-color: #fff; 
+    color: #000; 
+  }
+  .gray-contrast {
+    filter: grayscale(100%); 
+    overflow-x: hidden;
+  }
+
+.highlight-link {
+  color: red !important;
+  text-decoration: underline !important;
+}
+
+.highlight-header {
+  background-color: yellow;
+}
+
+</style>
+
+
+<div id="wraper" class="wraper">
+
+    <button id="accessibility-btn">
+      <i class="fa-brands fa-accessible-icon fa-flip-horizontal fa-2xl"></i>
+    </button>
+    <div id="accessibility_menu" style="display: none;">
+      <a href="#" id="accessibility_close">סגירה <i class="fa fa-times"></i></a>
+      <h3>תפריט נגישות</h3>
+      <a class="box wide" id="accessibility_font_odd"><span>הגדל גופן</span></a>
+      <a class="box wide" id="accessibility_font_minus"><span>הקטן גופן</span></a>
+      <a class="box wide" id="accessibility_font_reset"><span>איפוס גופן</span></a>
+      <a class="box wide" id="accessibility_font_readable"><i class="fa fa-font " aria-hidden="true"></i>גופן קריא</a>
+      <a class="box wide" id="accessibility_contrast_dark"><i class="fa fa-circle" aria-hidden="true"></i> <i class="fa fa-circle-thin" aria-hidden="true"></i>ניגודיות בהירה/ניגודיות כהה</a>
+      <a class="box wide" id="accessibility-contrast-gray"><i class="fa fa-adjust" aria-hidden="true"></i>שחור לבן</a>
+      <a class="box wide" id="accessibility-links"><i class="fa fa-link" aria-hidden="true"></i>הדגשת קישורים</a>
+      <a class="box wide" id="accessibility-header"><i class="fa fa-header" aria-hidden="true"></i>הדגשת כותרות</a>
+      <a class="box wide" id="accessibility-keyboard"><i class="fa fa-keyboard-o" aria-hidden="true"></i>ניווט מקלדת</a>
+      <a class="box wide" id="accessibility-reset"><i class="fa fa-times" aria-hidden="true"></i>בטל נגישות</a>
+      <a  id="accessibility-statement" style="text-align:center;display:block" class="fancybox iframe">הצהרת נגישות</a>
+      
+    </div>
+  
+</div>
+<div id="popup" class="container p-5" style="display: none;">
+            <div class="row no-gutters fixed-bottom">
+            <div id="ccc" class="col-lg-6 col-md-12">
+                <div class="alert alert-white shadow" style=" margin:auto; margin-bottom:50%; direction:rtl;" role="alert">
+                <button id="close" type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="True"><i class="fa-solid fa-x" style="font-size:25px;"></i></span>
+                </button>
+                <div id="all_content_pop_div"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+
+    
+
+  <script src="../../public/js/negishot.js">
+   
+  </script>

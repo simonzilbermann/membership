@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="../public/css/styles.css">
+  <link rel="stylesheet" href="../public/css/cart.css">
+
+</head>
+<body>
+  {{> header}}
+  <div id="popup_cart" class="container p-5" style="display: none;">
+    <div class="row no-gutters fixed-bottom">
+      <div class="col-lg-6 col-md-12">
+        <div id="all_content_pop_cart" class="alert alert-white shadow" style="width:70%; margin:auto; margin-bottom:50%; direction:rtl;" role="alert">
+          <button type="button" id="close_cart" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="True">&times;</span>
+          </button>
+          <h4 class="section-heading-lower"> התחברו למועדון שלכם כדי להנות ממבצעים בסל</h4>
+          <input id="Email" class="form-control" placeholder="אימייל" type="text" required="required">
+          <input id="Pass" class="form-control" placeholder="סיסמא" type="password" required="required">
+           
+          <div  class="intro-button mx-auto"><button onclick="loginmember()" class="btn btn-primary" >התחברות למועדון </button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="link">
+        
+  </div>
+  <div class="link">
+      
+  </div>
+  <section class="h-100 h-custom" >
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12">
+          <div class="card card-registration card-registration-2" style="border-radius: 15px; " id="one_">
+            <div class="card-body p-0">
+              <div class="row g-0">
+                <div class="col-lg-8">
+                  <div  id="special" class="p-5" style="direction:rtl;">
+                    <h1 class="fw-bold mb-0 text-black" >סל הקניות</h1>
+                    <h6 class="mb-0 text-muted" id="len"> </h6>
+                      <div id="repeat"></div>
+                      <div class="pt-5">
+                        <h6 class="mb-0"><a href="/prodbycat?cid=pk&name=פולי%20קפה" class="btn btn-dark btn-block btn-lg" data-mdb-ripple-color="dark"><i class="fas fa-long-arrow-alt-left me-2"></i>הוסף עוד מוצרים</a></h6>
+                      </div>
+                      
+                  </div>
+                  <hr class="my-4">
+                  <div class="coupon">
+                    <div class="header_coupon">
+                      <span>קוד קופון - </span>
+                    </div>
+                    <div class="content_coupon">  
+                      <input type="text" id="code_coupon" class="form-control form-control-lg" placeholder="הכניסו קוד קופון">
+                    </div>
+                    <div class="footer_coupon">
+                      <button id="coupon_btn" class="btn_cpn" > הפעלת קופון</button>
+                    </div>
+                  </div>
+                  <hr class="my-4">
+
+                </div>
+                <div class="col-lg-4 bg-grey" style="direction:rtl;" id="two_">
+                  <div class="p-5" id="three_">
+                    <h3 class="fw-bold mb-5 mt-2 pt-1">סיכום הזמנה</h3>
+                    <hr class="my-4">
+                    <div class="d-flex justify-content-between mb-4">
+                      <h5 class="text-uppercase" id="len2"></h5>
+                    </div>
+                    <h5 class="text-uppercase mb-3">שילוח</h5> 
+                    <div class="mb-4 pb-2">
+                      <select id="select" class="form-select form-select-lg mb-3">
+                        <option value="0">ללא שילוח איסוף עצמי</option>
+                        <option value="15">שילוח סטנדרטי 15 ₪</option>
+                        <option value="30">שילוח אקספרס 30 ₪</option>
+                      </select>
+                    </div>
+                    <span  lang="he" dir="rtl" style="display: flex;"><img src="/public/pics/delivery_icon.png"> <h1 style="color:#d2242a;font-size:1.5rem; margin-right:17%">   משלוחים חינם מעל 300₪ </h1></span><br>
+                    <hr class="my-4">
+                    <div class="d-flex justify-content-between mb-5">
+                      <h5 class="text-uppercase">מחיר לפני מבצעים והנחות:</h5>
+                      <h5 id="totalprice_old"> </h5>
+                    </div>
+                    
+                    <hr class="my-4">
+                    <div class="d-flex justify-content-between mb-5"   id="disc_precent">
+                    <h5 style="direction: rtl;" id="10precent">   הנחת חברי מועדון </h5> <i id="X_disc" class="fas fa-times fa-2xl" style="color: red; "></i>
+                    </div>
+                    <h6 style="direction: rtl;" id="pirot" >  פירוט מבצעים בסל: </h6>
+                    <div style="direction: rtl;" id="sales_desc"></div>
+                    <hr class="my-4">
+                    <div class="d-flex justify-content-between mb-5">
+                        <h5 class="text-uppercase">מחיר אחרי מבצעים והנחות:</h5>
+                        <h5 id="totalprice_after_discount"> </h5>
+                    </div>
+                    <div style="direction: rtl;" id="shipp_cost_label">
+                        
+                    </div>
+                    <hr class="my-4">
+                    <span>המחיר כולל שילוח ואו איסוף</span>
+                    <div class="d-flex justify-content-between mb-5"> 
+                        <h5 class="text-uppercase">סה״כ בהזמנה :</h5>
+                        <h5  id="totalprice_with_ship"> </h5>
+                    </div>
+                    
+                    <div class="mb-5">
+                      <div class="form-outline">
+                        <h5 class="text-uppercase mb-3"> שם פרטי</h5>
+                        <input type="text" id="name" class="form-control form-control-lg" />
+                        <h5 class="text-uppercase mb-3">כתובת המייל שלך</h5>
+                        <input type="text" id="email" class="form-control form-control-lg" />
+                        <h5 class="text-uppercase mb-3">טלפון ליצירת קשר</h5>
+                        <input type="text" id="phone" class="form-control form-control-lg" />
+                        <div id="addressdiv" style="display: none;">
+                          <h5 class="text-uppercase mb-3"> כתובת למשלוח (אשקלון בלבד)</h5>
+                          <input class="form-control form-control-lg" type="text" id="autocomplete-input" placeholder="בחר רחוב">
+                          <ul id="autocomplete-results"></ul>
+                          <h5 class="text-uppercase mb-3">מספר דירה</h5>
+                          <input type="number" id="numhouse" class="form-control form-control-lg" />
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-dark btn-block btn-lg" data-mdb-ripple-color="dark" onclick="closeorder()">סגירת הזמנה</button>
+                    <hr class="my-4">
+                    <div class="d-flex justify-content-between mb-5">
+                        <h5 class="text-uppercase">בעת סגירת הזמנה, ההזמנה שלך נשמרת במערכת ותוך 30 דק מסגירת ההזמנה אחד מניצגנו יצור איתך קשר להמשך טיפול בהזמנה </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{{> footer}}
+
+  <script src="../public/js/cart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,10 @@
+const router=require('express').Router();
+const {recover_password,updatepass,Register,Login,ForgetMyPass,deletemanager,getAll}=require('../controller/managers');
+router.post("/addmanager",Register);
+router.post("/login",Login);
+router.post("/forget",ForgetMyPass);
+router.post("/delete",deletemanager);
+router.post("/updatepass",updatepass);
+router.post("/recover_password",recover_password);
+router.get("/getall",getAll);
+module.exports = router;

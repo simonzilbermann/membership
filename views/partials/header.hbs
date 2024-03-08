@@ -1,0 +1,291 @@
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<script defer="" src="../../public/js/header.js"></script>
+<link rel="stylesheet" href="../../public/css/main.css">
+<link rel="stylesheet" href="../../public/css/header.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<style>
+        @media only screen and (max-width:31.25em){
+          .search__btn{
+            width:17rem;
+          }
+        } 
+        
+
+
+/* Style the custom checkbox */
+label {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+
+</style>
+{{>negishot}}
+
+<header class="header" >
+  <section class="header-container">
+    <div class="header-container__top">
+      <div class="slider">
+        <div class="slider__slides-cont ">
+          <div class="slider__slide" style="transform: translateX(-300%); display: block;">
+            <a href="/prodbycat?cid=k&name=קפסולות" class="slider__slide-link">
+              <span class="slider__slide-text">
+                  מבצעים חמים עכשיו באתר הקליקו לפרטים נוספים
+              </span>
+            </a>
+          </div><div class="slider__slide" style="transform: translateX(-200%); display: block;">
+            <a href="#" class="slider__slide-link">
+              <span class="slider__slide-text">
+                 משלוחים באשקלון והסביבה
+              </span>
+            </a>
+          </div><div class="slider__slide" style="transform: translateX(-100%); display: block;">
+            <a href="#" class="slider__slide-link">
+              <span class="slider__slide-text">
+                  המוצרים החדשים שלנו כבר כאן כנסו לגלרייה ותתחילו לבחור
+              </span>
+            </a>
+          </div><div class="slider__slide" style="transform: translateX(0%); display: block;">
+            <a href="#" class="slider__slide-link">
+              <span class="slider__slide-text">
+                  מבצעים מיוחדים לחברי מועדון באתר
+              </span>
+            </a>
+          </div><div class="slider__slide" style="transform: translateX(100%); display: block;">
+              <a href="/register" class="slider__slide-link">
+                  <span class="slider__slide-text">
+                      מצטרפים למועדון הלקוחות שלנו ונהנים משלל הטבות מיוחדות
+                  </span>
+              </a>
+          </div>
+        </div>
+        <button class="slider__nav slider__nav--right">
+            <img class="slider__nav-icon" src="https://d33wubrfki0l68.cloudfront.net/93f395286661f4258b675380c1861919e8652a4d/e2b4e/svg/chev-right.svg" alt="">
+        </button>
+        <button class="slider__nav slider__nav--left">
+            <img class="slider__nav-icon" src="https://d33wubrfki0l68.cloudfront.net/9a9bbfaec350171d76211210ab6fd425c0e74878/956eb/svg/chev-left.svg" alt="">
+        </button>
+      </div>
+    </div>
+    <div class="header-container__content" style="background-color: #FFFFFF;" >
+      <div class="header-container__navigation">
+          <div class="menu">
+              <button class="menu__btn">
+                  <span class="menu__btn-icon"></span>
+                  <span class="menu__btn-text">MENU</span>
+              </button>
+              <nav class="menu__nav">
+                <ul class="menu__nav-list" id="header_cats">
+                  <li class="menu__nav-list__item">
+                    <span class="menu__nav-list__image">
+                        <img src="../public/pics/expand.png" alt="">
+                    </span>
+                    <a class="menu__nav-list__link ">
+                        <span>עוד קטגוריות</span>
+                    </a>
+                    <div class="menu__container">
+                      <div class="menu__container-back">
+                          <button class="menu__container-back__btn">
+                              <span>
+                                חזרה
+                              </span>
+                              <img src="https://d33wubrfki0l68.cloudfront.net/e949cd62319b54c3b57ff68bd4d8e28725513b9c/ce35a/svg/menu-con-close.svg" alt="">
+                          </button>
+                      
+                      </div>
+                      <div class="menu__container-categories">
+                        <ul class="menu__container-category" id="more_cats">
+                        
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              
+                <div class="menu__nav-back ">
+                </div>
+              </nav>      
+          </div>
+          <div class="menu">
+            <button onclick="shitritfunc()" class="menu__btn" style="background-color:inherit;" >
+              <div class="wishlist" style="background-color:inherit;">
+                <div class="wishlist__btn" style="background-color:inherit; border: none;">            
+                  <i style="color:#000000" class="fa fa-search" aria-hidden="true"></i>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div class="search__container">
+            
+            <div class="search__container-header">
+                <div class="search__container-title">
+                  <h5>חיפושים פופולריים</h5>&nbsp;&nbsp;
+                  <form id="search-form" method="post" action="/product/search" style="display: flex;"  >
+                    <input placeholder="חיפוש" type="text" name="search-query" id="search-query" class="search__btn" />
+                  </form>
+                  <button onclick="shitritfunc()" style="background-color:inherit;">
+                  <div class="wishlist">
+                    <div class="wishlist__btn">            
+                      <span class="search__close-icon">&nbsp;</span>
+                    </div>
+                  </div>
+                </button>
+                </div>
+            </div>
+            <div class="search__container-body" id="search_cards_popular">
+            </div>
+
+          </div>
+   
+      </div>
+      <div class="header-container__logo header-container__logo--active">
+        <a href="/">
+          <div class="header-container__logo-box">
+              <img id="header_logo_pic" src="../../public/pics/logo_header.png" alt="logo company" class="header-container__logo-img">
+          </div>
+        </a>
+      </div>
+      <div class="header-container__toolbar">
+        <div class="user">
+          <button id="login_header_btn" class="user__btn">
+              <span class="user__btn-text">התחברות / הצטרפות</span>
+              <span class="user__btn-icon">
+                  <img src="../../public/pics/user_icon_svg.svg" alt="">
+              </span>
+          </button>
+          <div class="user__container" >
+              <div class="user__header">
+                <span class="user__header-title" id="login_html">התחברות
+                </span>
+                <button class="user__close">
+                    <span class="user__close-icon">&nbsp;
+                    </span>
+                </button>
+              </div>
+              <div class="user__body" id="user_body">
+
+
+                <span class="user__body-title">
+                  אימייל סיסמא ונתחיל :) 
+                </span>
+
+                <div class="user__tel">
+                    <input id="Email_header" type="text" class="user__tel-number" placeholder="אימייל"><br>
+                </div>
+                <div class="user__tel">
+                    <input id="Pass_header" type="password" class="user__tel-number" placeholder="סיסמא">
+                </div>
+
+                <button onclick="loginmember()" class="user__submit">
+                    <span>
+                        התחברות
+                    </span>
+                </button>
+              </div>     
+              <div class="user__body" id="user_body_forget" style="display: none;">
+                <span class="user__body-title">
+                  אימייל ונתחיל :) 
+                </span>
+
+                <div class="user__tel">
+                  <input id="Email_header_forget" type="text" class="user__tel-number" placeholder="אימייל"><br>
+                </div>
+
+                <button onclick="forgetpass()"  class="user__submit">
+                  <span>
+                      איפוס סיסמא
+                  </span>
+                </button>
+
+              </div>
+              
+              <span class="user__body-title" style="text-align: center;"><label for="forget">  <input type="checkbox"  id="forget" name="forget" value="forget"> שכחתי סיסמא</label></span>
+              
+              <div class="user__footer" id="user__footer">
+              </div>
+          </div>
+          <div class="user__back">&nbsp;</div>
+        </div>
+        <div class="wishlist">
+          <div class="wishlist__btn">
+            <a href="/order_detials" style="color: #000;">
+             <img class="cart__btn-icon" src="../../public/pics/bag_icon_svg.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="cart">
+            <button class="cart__btn">
+              <i class="fa-solid fa-cart-shopping fa-bounce cart__btn-icon"></i>
+              <span id="sum_items" class="cart__btn-text">1</span>
+
+            </button>
+            <div class="cart__container">
+                <div class="cart__header">
+                    <button class="cart__close">
+                      <span class="cart__close-icon">&nbsp;</span>
+                    </button>
+                    <div class="cart__header-title">
+                        <span>(</span>
+                        <span id="product-title">1</span>
+                        <span>)</span>
+                        <span>הסל שלי</span>
+                    </div>
+                </div>
+                <div class="cart__body" >
+                  <div class="cart__cu" style="display: block;">
+                      <span class="cart__cu-title" style="font-size: 25px;">
+                        מרכז הקפה והטבק
+                      </span><br>
+                      <span class="cart__cu-text"> 
+                        מצטפרים למועדון וזוכים ב10% הנחה
+                          </span>
+                      <a href="/register" class="cart__cu-link" style="font-size: 16px;text-decoration:underline;"> הצטרפות</a>
+                  </div>
+                  <div id="cart__body">
+                  </div>
+                  
+                </div>
+                
+                <div class="cart__footer" id="cart__footer">
+                  <span  lang="he" dir="rtl" style="display: flex;"><img src="/public/pics/delivery_icon.png"> <h1 style="color:#d2242a;font-size:2rem; margin-right:17%">   משלוחים חינם מעל 300₪ </h1></span><br>
+                    <div class="cart-total">
+                        
+                        <span>סה"כ</span>
+                        
+                        <span id="product-total"></span>
+                    </div>
+                    <div class="cart__chekout">
+                        <a class="cart__chekout-btn" href="/cart">
+                            <span>הסל המלא ותשלום</span>
+                        </a>
+                    </div>
+            
+                </div>
+            </div>
+            <div class="cart__back">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
+  <div id="popup_header" class="container p-5" style="display: none;">
+          <div class="row no-gutters fixed-bottom">
+          <div class="col-lg-6 col-md-12">
+              <div class="alert alert-white shadow" style=" margin:auto; margin-bottom:50%; direction:rtl;" role="alert">
+              <button id="close_header" type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="True"><i class="fa-solid fa-x" style="font-size:25px;"></i></span>
+              </button>
+              <div id="all_content_pop_div_header"></div>
+              </div>
+          </div>
+          </div>
+  </div>
+    
+     

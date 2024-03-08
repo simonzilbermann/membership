@@ -1,0 +1,13 @@
+const router=require('express').Router();
+const {get_popular_prods,deleteall,googlesheetcats,AllProdByCidRender,MinToMax,MaxToMin,AddCategory,GetAllCat,AllProdByCid,UpdateCategory}=require('../controller/category');
+router.post("/add",AddCategory);
+router.post("/getprodbycid",AllProdByCid);
+router.get("/all",GetAllCat);
+router.post("/allbyid",AllProdByCidRender);
+router.post("/maxtomin",MaxToMin);
+router.post("/mintomax",MinToMax);
+router.post("/update",UpdateCategory);
+router.get("/catgsheet",googlesheetcats);
+router.get("/deleteall",deleteall);
+router.get("/popular_prods",get_popular_prods);
+module.exports = router;

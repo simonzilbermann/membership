@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Product</title>
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+        <link rel="stylesheet" href="../public/css/styles.css">
+        <style>
+            .card.h-100{
+            border:2px solid black;
+            }
+            .card.h-100:hover{
+            background: #eae8e8;
+            }
+            .Favorite_btn{
+                padding: 2%; 
+                font-size:50px;
+                background-color:inherit;
+                border:none;
+            }
+
+            .Favorite_btn:hover{}
+         @media only screen and (min-width: 768px) {
+          #imgprod {
+            width: 40%;
+             height: 400px;
+            margin-left: 30%;
+          }
+        }
+
+        @media only screen and (max-width: 767px) {
+          #imgprod {
+            width: 94%;
+            height: 350px;
+
+          }
+        }
+    .card.h-100{
+      border:2px solid black;
+    }
+    .card.h-100:hover{
+      background:#FFFFFF;
+    }
+
+    #prevButton{
+    margin-top: 2%;
+    }
+    #nextButton {
+      margin-top: 2%;
+      position: absolute;
+      margin-left: 67%;
+    }
+    .list-group-item:hover {
+      background-color: #eae8e8;
+      cursor: pointer;
+    }
+      @media (min-width: 768px) {
+    .carousel-inner2 iframe {
+      width: 100%;
+    }
+  }
+.carousel-control-next {
+  right: 0;
+  left: auto;
+  width: auto;
+  margin-right: 15px;
+}
+.carousel-control-prev {
+  left: 0;
+  right: auto;
+  width: auto;
+  margin-left: 15px;
+}
+
+
+.cu__title{
+  font-size:12rem;
+  font-weight:700;
+  }
+  @media only screen and (max-width:50em){
+      .cu__title{
+        font-size:5rem;
+      }
+    }
+  @media only screen and (max-width:37.5em){
+    .cu__title{
+      font-size:2rem;
+      }
+    }
+        </style>
+    </head>
+    <body>
+        {{> header}}
+        
+        <div class="link"></div>
+        <div class="link"></div>
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="row gx-4 gx-lg-5 align-items-center" style="text-align:center;">
+              
+                    <img id="imgprod" class="card-img-top mb-5 mb-md-0"  alt="..." />
+                    <button id="add_to_Favorite" class="Favorite_btn">
+                        <i id="heart" class="fa-regular fa-heart" ></i> 
+                    </button>
+                    
+                     <div  id="skuprod" style="font-size: 13px; font-weight:300;"> </div>
+                        <h1 class="display-5 fw-bolder" id="nameprod"></h1>
+                        <div id="qtyExist">
+                            <div class="fs-5 mb-5">
+                                <span class="display-5 fw-bolder" id="prodprice"></span>
+                            </div>
+                            <p style="font-size: 13px; font-weight:400;" class="lead" id="proddesc"></p>
+                            <p style="font-size: 13px; font-weight:400;" class="lead" id="prodsale"></p>
+                        </div>
+                        <div id="NotExistQty" style="display: none;">
+                            <p class="lead" id="msg"></p>
+                        </div>  
+                    <button id="addcart" class="btn btn-primary" style="padding: 2%; font-size:30px;" onclick="addtocart()" > 
+                        <svg class="svg-inline--fa fa-cart-shopping fa-bounce"  aria-labelledby="svg-inline--fa-title-H8O4qGV6QBYp" data-prefix="fas" data-icon="cart-shopping" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><title id="svg-inline--fa-title-H8O4qGV6QBYp">הסל שלי</title><path fill="currentColor" d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"></path></svg> &nbsp; הוספה לסל 
+                    </button>    
+                </div>
+           
+            </div>
+            
+        </section>
+        <section class="py-5 ">
+            <div class="container px-4 px-lg-5 mt-5" >
+                <h2 class="fw-bolder mb-4" style="direction: rtl;">מוצרים קשורים</h2>
+
+                <div id="carouselExampleControls2"  class="carousel slide">
+                    <h1 id="title_of_banner" style="direction: rtl;" ></h1>
+                    <div id="carousel-inner" class="carousel-inner">  
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+                    <span style="background-color:black;color:black;" class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+                    <span style="background-color:black;color:black;" class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        {{> footer}}
+        <script src="../public/js/prodpagehbs.js"></script>  
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+
